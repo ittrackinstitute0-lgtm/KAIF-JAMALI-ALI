@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaif Jamali Sports | Pro Athletic Equipment & Sports Gear</title>
+  <meta name="description" content="Kaif Jamali Sports - Premium cricket willow bats, FIFA match footballs, basketballs, fitness equipment, combat gear, and pro sportswear.">
+  
+  <!-- Google Fonts: Inter & Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- TOP ANNOUNCEMENT BAR -->
+  <div class="top-bar">
+    <div class="top-bar-inner">
+      <div>
+        <span class="promo-badge">⚡ FLASH DEAL</span>
+        Use code <strong style="color: var(--primary);">CHAMPION20</strong> for 20% OFF | Free Worldwide Shipping over $99
+      </div>
+      <div class="top-bar-links">
+        <span id="cloudStatusIndicator" style="display: inline-flex; align-items: center; gap: 5px; font-size: 0.75rem; color: #94a3b8;">
+          <i class="fa-solid fa-cloud"></i> Checking Cloud DB...
+        </span>
+        <select class="currency-select" id="currencySelector">
+          <option value="USD">USD ($)</option>
+          <option value="INR">INR (₹)</option>
+          <option value="EUR">EUR (€)</option>
+          <option value="GBP">GBP (£)</option>
+        </select>
+        <a href="admin.html" class="admin-badge-link" title="Open Admin Management Panel">
+          <i class="fa-solid fa-shield-halved"></i> Admin Panel
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- NAVIGATION BAR -->
+  <header class="navbar">
+    <div class="navbar-inner">
+      <!-- BRAND LOGO -->
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">
+          <i class="fa-solid fa-bolt"></i>
+        </div>
+        <div class="logo-text-wrap">
+          <span class="logo-title">KAIF JAMALI</span>
+          <span class="logo-sub">SPORTS & EQUIPMENT</span>
+        </div>
+      </a>
+
+      <!-- SEARCH INPUT -->
+      <div class="nav-search-wrap">
+        <i class="fa-solid fa-magnifying-glass nav-search-icon"></i>
+        <input type="text" id="navSearchInput" class="nav-search-input" placeholder="Search cricket bats, footballs, gym gear...">
+        <button id="clearSearchBtn" class="search-clear-btn" aria-label="Clear Search"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <!-- DESKTOP NAV MENU -->
+      <ul class="nav-menu">
+        <li><a href="#hero" class="nav-link active">Home</a></li>
+        <li><a href="#catalog" class="nav-link">Shop Gear</a></li>
+        <li><a href="#deals" class="nav-link">Pro Drops</a></li>
+        <li><a href="#about" class="nav-link">Our Story</a></li>
+        <li><a href="#reviews" class="nav-link">Athletes</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- ACTION BUTTONS -->
+      <div class="nav-actions">
+        <!-- Wishlist Button -->
+        <button class="action-btn" id="wishlistTrigger" title="Wishlist" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="action-badge" id="wishlistCount">0</span>
+        </button>
+
+        <!-- Cart Button -->
+        <button class="cart-pill-btn" id="cartTrigger" aria-label="Open Shopping Cart">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span id="cartTotalHeader">$0.00</span>
+          <span class="action-badge" id="cartCountHeader">0</span>
+        </button>
+
+        <!-- Admin Quick Button -->
+        <a href="admin.html" class="action-btn" title="Open Admin Panel" aria-label="Admin Panel">
+          <i class="fa-solid fa-gear"></i>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="hero">
+    <div class="hero-glow"></div>
+    <div class="hero-glow-secondary"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-tag">
+          <i class="fa-solid fa-trophy"></i> Elite Performance Sporting Goods
+        </div>
+        <h1 class="hero-title">
+          UNLEASH YOUR <span>CHAMPION</span> SPIRIT
+        </h1>
+        <p class="hero-desc">
+          Official pro-grade equipment engineered for match-winners. Grade-1 English Willow bats, FIFA-certified footballs, precision tennis gear, and Olympic gym systems designed by athletes, for athletes.
+        </p>
+        <div class="hero-buttons">
+          <a href="#catalog" class="btn-primary">
+            <i class="fa-solid fa-bag-shopping"></i> Shop Collection
+          </a>
+          <a href="#deals" class="btn-secondary">
+            <i class="fa-solid fa-fire"></i> View Pro Drops
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>50K+</h3>
+            <p>Athletes Equipped</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Authentic Brands</p>
+          </div>
+          <div class="stat-item">
+            <h3>4.9★</h3>
+            <p>Pro Rating</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-card">
+          <img src="https://images.unsplash.com/photo-1517649763962-0c623266ddc0?auto=format&fit=crop&w=1000&q=80" alt="Athletic training and sports gear">
+          <div class="hero-floating-badge">
+            <div class="floating-badge-icon">
+              <i class="fa-solid fa-medal"></i>
+            </div>
+            <div>
+              <div class="floating-badge-title">Kaif Jamali Signature Series</div>
+              <div class="floating-badge-sub">Tested by Professional Players</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST BAR -->
+  <div class="trust-banner">
+    <div class="trust-inner">
+      <div class="trust-box">
+        <div class="trust-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <div class="trust-title">100% Authentic Quality</div>
+          <div class="trust-sub">Direct pro-factory sourcing</div>
+        </div>
+      </div>
+      <div class="trust-box">
+        <div class="trust-icon"><i class="fa-solid fa-truck-fast"></i></div>
+        <div>
+          <div class="trust-title">Express Global Shipping</div>
+          <div class="trust-sub">Fast dispatch & live tracking</div>
+        </div>
+      </div>
+      <div class="trust-box">
+        <div class="trust-icon"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+        <div>
+          <div class="trust-title">30-Day Money Back</div>
+          <div class="trust-sub">Hassle-free return policy</div>
+        </div>
+      </div>
+      <div class="trust-box">
+        <div class="trust-icon"><i class="fa-solid fa-database"></i></div>
+        <div>
+          <div class="trust-title">Supabase Cloud Sync</div>
+          <div class="trust-sub">Live cloud inventory & orders</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN CATALOG SECTION -->
+  <section class="section-wrap" id="catalog">
+    <div class="section-header">
+      <div>
+        <div class="section-subtitle">Premium Inventory</div>
+        <h2 class="section-title">Explore Sports Equipment</h2>
+      </div>
+      <div class="results-count" id="resultsCount">Loading products...</div>
+    </div>
+
+    <!-- CATEGORY PILL TABS -->
+    <div class="category-pills-wrap" id="categoryPills">
+      <button class="cat-pill active" data-category="ALL"><i class="fa-solid fa-border-all"></i> All Sports</button>
+      <button class="cat-pill" data-category="Cricket"><i class="fa-solid fa-baseball-bat-ball"></i> Cricket</button>
+      <button class="cat-pill" data-category="Football"><i class="fa-solid fa-futbol"></i> Football</button>
+      <button class="cat-pill" data-category="Basketball"><i class="fa-solid fa-basketball"></i> Basketball</button>
+      <button class="cat-pill" data-category="Badminton"><i class="fa-solid fa-feather"></i> Badminton</button>
+      <button class="cat-pill" data-category="Tennis"><i class="fa-solid fa-table-tennis-paddle-ball"></i> Tennis</button>
+      <button class="cat-pill" data-category="Fitness"><i class="fa-solid fa-dumbbell"></i> Fitness & Gym</button>
+      <button class="cat-pill" data-category="Boxing"><i class="fa-solid fa-hand-back-fist"></i> Boxing</button>
+      <button class="cat-pill" data-category="Athletics"><i class="fa-solid fa-person-running"></i> Athletics</button>
+    </div>
+
+    <!-- CATALOG TOOLBAR -->
+    <div class="catalog-toolbar">
+      <div class="catalog-search">
+        <i class="fa-solid fa-magnifying-glass catalog-search-icon"></i>
+        <input type="text" id="catalogSearchInput" placeholder="Filter by name, brand, or feature...">
+      </div>
+      <div class="catalog-filters">
+        <select class="filter-select" id="sortSelect">
+          <option value="featured">Sort by: Featured</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="rating">Highest Rated</option>
+          <option value="name">Product Name (A-Z)</option>
+        </select>
+        <select class="filter-select" id="stockFilter">
+          <option value="all">Availability: All Items</option>
+          <option value="in-stock">In Stock Only</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- PRODUCT GRID CONTAINER -->
+    <div class="products-grid" id="productsGrid">
+      <!-- Injected via JavaScript -->
+    </div>
+  </section>
+
+  <!-- DEAL OF THE DAY / PRO DROP SECTION -->
+  <section class="deal-section" id="deals">
+    <div>
+      <span class="deal-badge"><i class="fa-solid fa-stopwatch"></i> LIMITED TIME OFFER</span>
+      <h2 class="deal-title">PRO GRADE <span>WILLOW & DUMBBELL</span> DROP</h2>
+      <p class="deal-desc">
+        Take your training to the next level. Claim up to 30% discount on select match-grade cricket equipment and home training weights. Limited tournament stock available.
+      </p>
+      
+      <!-- Countdown timer -->
+      <div class="countdown-grid">
+        <div class="countdown-box">
+          <div class="countdown-number" id="cdHours">14</div>
+          <div class="countdown-label">Hours</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-number" id="cdMinutes">38</div>
+          <div class="countdown-label">Mins</div>
+        </div>
+        <div class="countdown-box">
+          <div class="countdown-number" id="cdSeconds">52</div>
+          <div class="countdown-label">Secs</div>
+        </div>
+      </div>
+
+      <a href="#catalog" class="btn-primary">
+        <i class="fa-solid fa-bolt"></i> Claim Deal Now
+      </a>
+    </div>
+    <div class="deal-image-wrap">
+      <img src="https://images.unsplash.com/photo-1531415074868-036b1c5dd535?auto=format&fit=crop&w=800&q=80" alt="English Willow Cricket Bat Deal">
+    </div>
+  </section>
+
+  <!-- ABOUT US / BRAND PILLARS -->
+  <section class="about-section" id="about">
+    <div class="about-grid">
+      <div class="about-image">
+        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1000&q=80" alt="Kaif Jamali Sports craftsmanship">
+      </div>
+      <div>
+        <div class="about-badge">The Kaif Jamali Standard</div>
+        <h2 class="about-title">BUILT FOR ATHLETES WHO DEMAND THE BEST</h2>
+        <p class="about-text">
+          Founded with a relentless obsession for sporting excellence, <strong>Kaif Jamali Sports</strong> bridges the gap between grassroots passion and professional arena performance. We work directly with master bat-makers, certified ball craftsmen, and ergonomic sports engineers to deliver equipment that never compromises.
+        </p>
+        <div class="about-features">
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="feature-info">
+              <h4>Pro-Certified</h4>
+              <p>Meets regulation criteria for club & national tournaments.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-gauge-high"></i></div>
+            <div class="feature-info">
+              <h4>Impact Tested</h4>
+              <p>Subjected to high-velocity load and durability stress tests.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-handshake"></i></div>
+            <div class="feature-info">
+              <h4>Athlete Driven</h4>
+              <p>Every product reviewed and field-tested by active coaches.</p>
+            </div>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon"><i class="fa-solid fa-cloud-arrow-up"></i></div>
+            <div class="feature-info">
+              <h4>Live Supabase Cloud</h4>
+              <p>Real-time order synchronization with cloud administration.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CUSTOMER REVIEWS -->
+  <section class="section-wrap" id="reviews">
+    <div class="section-header">
+      <div>
+        <div class="section-subtitle">Verified Feedback</div>
+        <h2 class="section-title">What Champions Say</h2>
+      </div>
+      <div>
+        <span style="color: var(--accent-gold); font-weight: 800; font-size: 1.1rem;">★ 4.9 / 5.0</span>
+        <span style="color: var(--text-muted); font-size: 0.9rem;"> from over 2,400+ athlete reviews</span>
+      </div>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+          "The Kaif Jamali Grade 1 Willow bat has an unbelievable pickup and ping. Smashed two centuries in our division cup with it. The sweet spot is massive!"
+        </p>
+        <div class="reviewer-profile">
+          <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&q=80" alt="Reviewer">
+          <div>
+            <div class="reviewer-name">Vikram Malhotra</div>
+            <div class="reviewer-sport">Club Cricket Captain & Opener</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+          "The thermo match soccer ball holds air perfectly and swerves true. Our academy ordered 20 balls and the quality rivals balls twice the price."
+        </p>
+        <div class="reviewer-profile">
+          <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&q=80" alt="Reviewer">
+          <div>
+            <div class="reviewer-name">Coach David Silva</div>
+            <div class="reviewer-sport">Youth Academy Head Coach</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">
+          "The 40kg adjustable dumbbells saved my home gym setup. Smooth dial transition, solid cast iron, and arrived in 48 hours without a scratch."
+        </p>
+        <div class="reviewer-profile">
+          <img class="reviewer-avatar" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=150&q=80" alt="Reviewer">
+          <div>
+            <div class="reviewer-name">Ayesha Khan</div>
+            <div class="reviewer-sport">Crossfit & Strength Athlete</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT / INQUIRY SECTION -->
+  <section class="contact-section" id="contact">
+    <div class="contact-container">
+      <div class="contact-sidebar">
+        <div>
+          <h3>Get In Touch</h3>
+          <p>Need custom team jerseys, bulk academy equipment, or bat customization? Drop our team a line.</p>
+          <div class="contact-info-list">
+            <div class="contact-info-item">
+              <div class="contact-icon-box"><i class="fa-solid fa-location-dot"></i></div>
+              <div>
+                <strong>Kaif Jamali Sports HQ</strong>
+                <div style="color: #94a3b8; font-size: 0.85rem;">Sports Hub Arena, Main Boulevard</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon-box"><i class="fa-solid fa-phone"></i></div>
+              <div>
+                <strong>Phone Support</strong>
+                <div style="color: #94a3b8; font-size: 0.85rem;">+1 (800) 555-KJSPORTS</div>
+              </div>
+            </div>
+            <div class="contact-info-item">
+              <div class="contact-icon-box"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <strong>Email Inquiries</strong>
+                <div style="color: #94a3b8; font-size: 0.85rem;">support@kaifjamalisports.com</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div style="margin-top: 30px; font-size: 0.8rem; color: #94a3b8;">
+          ⚡ Admin can review all inquiries in the <a href="admin.html" style="color: var(--primary); text-decoration: underline;">Admin Panel</a>.
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h4>Send a Direct Inquiry</h4>
+        <form id="contactForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-input" id="contactName" placeholder="e.g. Kaif Jamali" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Your Email</label>
+              <input type="email" class="form-input" id="contactEmail" placeholder="e.g. athlete@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Subject / Sports Category</label>
+            <input type="text" class="form-input" id="contactSubject" placeholder="e.g. Cricket Team Sponsorship & Bulk Order" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Your Message</label>
+            <textarea class="form-textarea" id="contactMessage" rows="4" placeholder="Tell us about your sporting requirements..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+            <i class="fa-solid fa-paper-plane"></i> Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="brand-logo">
+          <div class="logo-icon"><i class="fa-solid fa-bolt"></i></div>
+          <div class="logo-text-wrap">
+            <span class="logo-title">KAIF JAMALI</span>
+            <span class="logo-sub">SPORTS & EQUIPMENT</span>
+          </div>
+        </div>
+        <p>Premium sports gear crafted for athletes, champions, and sports enthusiasts worldwide. Backed by Supabase cloud storage.</p>
+        <span class="supabase-connected-badge" id="footerDbStatus">
+          <i class="fa-solid fa-circle-check"></i> Supabase Integrated
+        </span>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Categories</h4>
+        <ul class="footer-links">
+          <li><a href="#catalog" onclick="filterCategory('Cricket')">Cricket Gear</a></li>
+          <li><a href="#catalog" onclick="filterCategory('Football')">Football & Soccer</a></li>
+          <li><a href="#catalog" onclick="filterCategory('Basketball')">Basketball Equipments</a></li>
+          <li><a href="#catalog" onclick="filterCategory('Fitness')">Weights & Gym Gear</a></li>
+          <li><a href="#catalog" onclick="filterCategory('Boxing')">Boxing & MMA Gloves</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Support & Admin</h4>
+        <ul class="footer-links">
+          <li><a href="admin.html"><i class="fa-solid fa-lock"></i> Store Admin Panel</a></li>
+          <li><a href="schema.sql" target="_blank"><i class="fa-solid fa-code"></i> Database SQL Schema</a></li>
+          <li><a href="#about">About Kaif Jamali</a></li>
+          <li><a href="#contact">Club Inquiries</a></li>
+          <li><a href="#reviews">Athlete Endorsements</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Join The Champion Club</h4>
+        <p style="font-size: 0.85rem; color: var(--text-light-muted); margin-bottom: 12px;">Get secret discount vouchers, gear drop alerts, and training insights.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit">Join</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>
+        &copy; 2026 <strong>Kaif Jamali Sports</strong>. All Rights Reserved. Engineered for excellence.
+      </div>
+      <div>
+        <a href="admin.html" style="color: var(--primary); font-weight: 700; margin-left: 10px;">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Admin Portal
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SLIDE-OUT CART DRAWER -->
+  <div class="cart-overlay" id="cartOverlay">
+    <div class="cart-drawer">
+      <div class="cart-header">
+        <h3><i class="fa-solid fa-bag-shopping"></i> Your Sports Bag (<span id="cartDrawerCount">0</span>)</h3>
+        <button class="close-drawer-btn" id="closeCartBtn" aria-label="Close Cart"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <div class="free-shipping-bar">
+        <span id="freeShippingText">Add $50.00 more for Free Worldwide Shipping!</span>
+        <div class="shipping-progress">
+          <div class="shipping-progress-fill" id="shippingProgressBar" style="width: 50%;"></div>
+        </div>
+      </div>
+
+      <div class="cart-body" id="cartItemsList">
+        <!-- Cart Items Injected Dynamically -->
+      </div>
+
+      <div class="cart-footer">
+        <div class="promo-input-row">
+          <input type="text" id="promoCodeInput" placeholder="PROMO CODE (e.g. CHAMPION20)">
+          <button type="button" id="applyPromoBtn">Apply</button>
+        </div>
+        <div class="cart-summary-line">
+          <span>Subtotal</span>
+          <span id="cartSubtotal">$0.00</span>
+        </div>
+        <div class="cart-summary-line" id="discountRow" style="display: none; color: #16a34a;">
+          <span>Discount (Promo)</span>
+          <span id="cartDiscount">-$0.00</span>
+        </div>
+        <div class="cart-summary-line">
+          <span>Estimated Shipping</span>
+          <span id="cartShipping">$0.00</span>
+        </div>
+        <div class="cart-summary-total">
+          <span>Total</span>
+          <span id="cartGrandTotal">$0.00</span>
+        </div>
+        <button class="btn-checkout" id="openCheckoutBtn">
+          <i class="fa-solid fa-lock"></i> Proceed to Checkout
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeCheckoutBtn" aria-label="Close Checkout"><i class="fa-solid fa-xmark"></i></button>
+      
+      <div id="checkoutFormContent">
+        <div class="checkout-header">
+          <h3 style="font-size: 1.4rem; font-weight: 800;"><i class="fa-solid fa-shield-halved"></i> Secure Athlete Checkout</h3>
+          <p style="font-size: 0.85rem; color: #94a3b8;">Orders sync automatically with the Kaif Jamali Admin Backend.</p>
+        </div>
+        <div class="checkout-body">
+          <form id="checkoutForm">
+            <h4 style="font-size: 1rem; margin-bottom: 12px; color: #0b0f19;">1. Contact & Athlete Details</h4>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">Full Name *</label>
+                <input type="text" class="form-input" id="custName" placeholder="Kaif Jamali" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address *</label>
+                <input type="email" class="form-input" id="custEmail" placeholder="kaif@sports.com" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone Number *</label>
+              <input type="tel" class="form-input" id="custPhone" placeholder="+1 555-0192" required>
+            </div>
+
+            <h4 style="font-size: 1rem; margin: 18px 0 12px; color: #0b0f19;">2. Delivery Address</h4>
+            <div class="form-group">
+              <label class="form-label">Street Address *</label>
+              <input type="text" class="form-input" id="custAddress" placeholder="Suite 400, Stadium Road" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">City *</label>
+                <input type="text" class="form-input" id="custCity" placeholder="City / Metro" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Postal / Zip Code *</label>
+                <input type="text" class="form-input" id="custPostal" placeholder="10001" required>
+              </div>
+            </div>
+
+            <h4 style="font-size: 1rem; margin: 18px 0 12px; color: #0b0f19;">3. Payment Method</h4>
+            <div class="payment-methods-grid">
+              <div class="payment-option active">
+                <input type="radio" name="payMethod" id="payCOD" value="Cash on Delivery" checked>
+                <label for="payCOD">
+                  <i class="fa-solid fa-money-bill-wave" style="font-size: 1.2rem; display: block; margin-bottom: 4px; color: #10b981;"></i>
+                  Cash on Delivery
+                </label>
+              </div>
+              <div class="payment-option">
+                <input type="radio" name="payMethod" id="payCard" value="Credit / Debit Card">
+                <label for="payCard">
+                  <i class="fa-solid fa-credit-card" style="font-size: 1.2rem; display: block; margin-bottom: 4px; color: #3b82f6;"></i>
+                  Card Payment
+                </label>
+              </div>
+              <div class="payment-option">
+                <input type="radio" name="payMethod" id="payOnline" value="UPI / Instant Transfer">
+                <label for="payOnline">
+                  <i class="fa-solid fa-qrcode" style="font-size: 1.2rem; display: block; margin-bottom: 4px; color: #8b5cf6;"></i>
+                  UPI / Transfer
+                </label>
+              </div>
+            </div>
+
+            <div style="background: #f8fafc; border-radius: 12px; padding: 14px; margin-bottom: 18px;">
+              <div style="display: flex; justify-content: space-between; font-weight: 800; font-size: 1.1rem; color: #0b0f19;">
+                <span>Total Due:</span>
+                <span id="checkoutTotalDisplay">$0.00</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-checkout" id="submitOrderBtn">
+              <i class="fa-solid fa-circle-check"></i> Place Order Now
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- SUCCESS CONFIRMATION VIEW -->
+      <div id="checkoutSuccessContent" style="display: none;" class="order-success-screen">
+        <div class="success-check-icon">
+          <i class="fa-solid fa-check"></i>
+        </div>
+        <h3 style="font-size: 1.8rem; font-weight: 900; color: #0b0f19; margin-bottom: 8px;">Order Placed Successfully!</h3>
+        <p style="color: #64748b; font-size: 0.95rem; margin-bottom: 20px;">
+          Thank you for choosing Kaif Jamali Sports. Your gear is being prepared for dispatch.
+        </p>
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 20px; max-width: 400px; margin: 0 auto 24px; text-align: left;">
+          <div style="margin-bottom: 8px;"><strong>Order ID:</strong> <span id="successOrderId" style="color: var(--primary-hover); font-weight: 800;"></span></div>
+          <div style="margin-bottom: 8px;"><strong>Athlete:</strong> <span id="successCustomer"></span></div>
+          <div style="margin-bottom: 8px;"><strong>Total Paid:</strong> <span id="successTotal" style="font-weight: 800;"></span></div>
+          <div><strong>Payment:</strong> <span id="successPayment"></span></div>
+        </div>
+        <div style="display: flex; gap: 12px; justify-content: center;">
+          <button class="btn-secondary" onclick="window.print()" style="color: #0b0f19; border-color: #cbd5e1;">
+            <i class="fa-solid fa-print"></i> Print Invoice
+          </button>
+          <button class="btn-primary" id="continueShoppingBtn">
+            Continue Shopping
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK VIEW MODAL -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="closeQuickViewBtn" aria-label="Close View"><i class="fa-solid fa-xmark"></i></button>
+      <div class="quickview-body" id="quickViewContent">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <!-- WISHLIST MODAL -->
+  <div class="modal-overlay" id="wishlistModal">
+    <div class="modal-dialog" style="max-width: 500px;">
+      <button class="modal-close-btn" id="closeWishlistBtn" aria-label="Close Wishlist"><i class="fa-solid fa-xmark"></i></button>
+      <div style="padding: 24px;">
+        <h3 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 16px; display: flex; align-items: center; gap: 10px;">
+          <i class="fa-solid fa-heart" style="color: #ff1744;"></i> Your Wishlist
+        </h3>
+        <div id="wishlistItemsList" style="display: flex; flex-direction: column; gap: 14px; max-height: 400px; overflow-y: auto;">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- SUPABASE JS SDK V2 -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  
+  <!-- APP SCRIPTS -->
+  <script src="js/supabase-client.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
